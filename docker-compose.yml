@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  watcher-in-docker:
+    #image: watcherdocker
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./data:/data
+      # - type: bind
+      #   source: ./data
+      #   target: /data
